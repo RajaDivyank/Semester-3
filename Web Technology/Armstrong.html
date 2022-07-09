@@ -5,31 +5,30 @@
 	<title>Armstrong</title>
 </head>
 <body>
-		<script type="text/javascript">
-			n=parseInt(prompt("Enter number"));
-			i=0;
-			r=n;
-			t=n;
-			m=0;
-			s=0;
-			while(n>0){
-				if(n!=0){
-					i++;
-					n=parseInt(n/10);
-				}
+	<script type="text/javascript">
+		n=parseInt(prompt("Enter number"));
+		i=0;
+		r=n;
+		t=n;
+		m=0;
+		s=0;
+		while(n>0){
+			if(n!=0){
+				i++;
+				n=parseInt(n/10);
 			}
-			while(r>0){
-				m=Math.pow(r%10,i);
-				r=parseInt(r/10);
-				s=s+m;
-			}
-			if(t==s){
-				document.write("Armstrong");
-			}
-			else{
-				document.write("Not Armstrong");	
-			}
-
-		</script>
+		}
+		while(r>0){
+			m=Math.pow(r%10,i);
+			r=parseInt(r/10);
+			s=s+m;
+		}
+		if(t==s){
+			document.write("Armstrong");
+		}
+		else{
+			document.write("Not Armstrong");	
+		}
+	</script>
 </body>
 </html>
