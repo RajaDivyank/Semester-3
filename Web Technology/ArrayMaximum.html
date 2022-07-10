@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+		<script type="text/javascript">
+			var n = parseInt(prompt("Enter Array Number = "));
+			const array = [n];
+			var maximum=0;
+			for(i=0 ; i<n ; i++){
+            	array[i]=parseInt(prompt("Enter Array Element = "));
+        	}
+        	maximun=array[0];
+        	for(i=0;i<n;i++){
+        		if(maximum<array[i]){
+        			maximum=array[i];
+        		}
+        	}
+        	document.write(maximum);
+		</script>
+</body>
+</html>
