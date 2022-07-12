@@ -28,10 +28,11 @@
 
 --9. Set the value of department to Marketing who belongs to London city.
 	UPDATE Employee Set Department='Marketing'
-	WHERE City='London';
+	WHERE City='London'
 --10. Display all the employees whose name ends with either “n” or “y”.
 	SELECT * FROM Employee 
 	WHERE Ename LIKE '%n' or Ename LIKE '%y';
+
 --11. Find smallest integer value that is greater than or equal to 63.1, 63.8 and -63.2.
 	SELECT CEILING (63.1), CEILING (63.8), CEILING (-63.2);
 
