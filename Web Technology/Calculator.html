@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        *{
+            box-sizing: border-box;
+            background-color: aqua;
+        }
+        #display{
+            height: 10vh;
+            width: 100%;
+            border: 2px solid black;
+            
+        }
+        #button{
+            width: 20%;
+            padding: 10px;
+            font-size: 22px;
+            font-weight: bold;
+            margin-top: 40px;
+            margin-left: 50px;
+            padding: 20px;
+            border-radius: 5px;
+            background-color: orchid;
+        }
+    </style>
+</head>
+<body>
+<h1 id="display"></h1>
+<button  id="button" onclick="operation(this)">%</button>
+<button  id="button" onclick="operation(this)">+/-</button>
+<button  id="button" onclick="clean()">CE</button>
+<button  id="button" onclick="goBack()">C</button>
+<br>
+<button  id="button" onclick="input(this)">7</button>
+<button  id="button" onclick="input(this)">8</button>
+<button  id="button" onclick="input(this)">9</button>
+<button  id="button" onclick="operation(this)">*</button>
+<br>
+<button  id="button" onclick="input(this)">4</button>
+<button  id="button" onclick="input(this)">5</button>
+<button  id="button" onclick="input(this)">6</button>
+<button  id="button" onclick="operation(this)">-</button>
+<br>
+<button  id="button" onclick="input(this)">1</button>
+<button  id="button" onclick="input(this)">2</button>
+<button  id="button" onclick="input(this)">3</button>
+<button  id="button" onclick="operation(this)">+</button>
+<br>
+<button id="button" onclick="operation(this)">/</button>
+<button  id="button" onclick="input(this)">0</button>
+<button  id="button" onclick="input(this)">.</button>
+<button  id="button" onclick="output()">=</button>
+
+
+
+<script>
+    var oldValue;
+    var operator;
+    function input(n){
+        a = document.getElementById("display");
+        if(a.innerHTML =='+'||a.innerHTML =='-'||a.innerHTML =='*'||a.innerHTML =='/'){
+            a.innerHTML="";
+        }
+        a.innerHTML += n.innerHTML;
+    }
+    function operation(op){
+        a = document.getElementById("display");
+        oldValue = parseFloat(a.innerHTML);
+        a.innerHTML = op.innerHTML;
+        operator = op.innerHTML;
+    }
+    function clean(){
+        document.getElementById("display").innerHTML = "";
+    }
+    function output(){
+        a = document.getElementById("display");
+        newValue = parseFloat(a.innerHTML);
+        if(operator == '+'){
+            answer = oldValue+newValue;
+        }
+        else if(operator == '-'){
+            answer = oldValue-newValue;
+        }
+        else if(operator == '*'){
+            answer = oldValue*newValue;
+        }
+        else if(operator == '/'){
+            answer = oldValue/newValue;
+        }
+        a.innerHTML=answer;
+    }
+    function goBack(){
+        a = document.getElementById("display");
+        str=a.innerHTML;
+        a.innerHTML=str.substring(0,str.length-1);
+    }
+</script>
+</body>
+</html>
