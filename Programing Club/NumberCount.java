@@ -1,3 +1,4 @@
+// Count occurrences of a number in a sorted array with duplicates
 import java.util.Scanner;
 
 public class NumberCount{
