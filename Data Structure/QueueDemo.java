@@ -4,7 +4,7 @@ class Demo{
 	int rear=-1;
 	int front=-1;
 		
-	public void enqueue(int n){
+	public void enQueue(int n){
 		if(rear>array.length-1){
 			System.out.print("Queue overflow");
 		}
@@ -34,8 +34,8 @@ class Demo{
 	public class QueueDemo{
 		public static void main(String[] args){
 			Demo D1=new Demo();
-			D1.enqueue(4);
-			D1.enqueue(5);
+			D1.enQueue(4);
+			D1.enQueue(5);
 			D1.deQueue();
 			D1.displayQueue();
 		}
