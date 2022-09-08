@@ -14,8 +14,17 @@ export default function GetAllStudent(){
 
     const fire = data && data.map((stu)=>{
         return(
-            <>
-                <div className="card col-4 m-4" style={{
+            <div className="box">
+                <span></span>
+                <div className="content">
+                <img src={stu.StudentImage} className="card-img-top" />
+                <h2>{stu.StudentName}</h2>
+                <div className="btn btn-primary" onClick={()=>{
+                    navigate("/Student/"+stu.id);
+                    }}>Detail
+                </div>
+                </div>
+                {/* <div className="card col-4 m-4" style={{
                     width:"18rem"
                 }}> 
                     <img src={stu.StudentImage} className="card-img-top" />
@@ -32,16 +41,17 @@ export default function GetAllStudent(){
                         navigate('/Student/'+stu.id);
                         }}>Detail</div>
                     </div>
-                </div>
-            </>
+                </div> */}
+            </div>
         );
     })
     return(
         <>
-            <div className="row">
-                {fire}
+            <div className="cnt homeBg2">
+                <div className="row row-cols-1 row-cols-md-3 g-4 align">
+                    {fire}{" "}
+                </div>
             </div>
-            
         </>
     );
 }

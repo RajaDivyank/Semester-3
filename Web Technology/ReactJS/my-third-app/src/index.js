@@ -10,7 +10,10 @@ import GetAllStudent from './GetAllStudent';
 import  Home  from './Home';
 import './index.css';
 import "./Detail.css";
+import "./Add.css";
 import Layout from './Layout';
+import AddFaculty from './AddFaculty';
+import EditFaculty from './EditFaculty';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -25,6 +28,8 @@ root.render(
           <Route path="/Student/:id" element={<DetailStudent/>}></Route>
           <Route path="/Faculty" element={<GetAllFaculty/>} ></Route>
           <Route path="/Faculty/:id" element={<DetailFaculty/>} ></Route>
+          <Route path="/Faculty/add" element={<AddFaculty/>} ></Route>
+          <Route path="/Faculty/edit/:id" element={<EditFaculty/>} ></Route>
         </Route>
     </Routes>
   </BrowserRouter>
