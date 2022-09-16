@@ -17,42 +17,42 @@ export default function EditStudent(){
         <div className="Whole">
             <div className="container2">
                 <div className="title">Student Edited</div>
-                <form action="#">
+                <form>
                     <div className="user-details">
                         <div className="input-box">
                             <span className="details">Student Name</span>
-                            <input type="text" placeholder="Enter your name" required onChange={(e)=>{
+                            <input type="text" value={data.StudentName} required onChange={(e)=>{
                                 setData({...data,StudentName:e.target.value});
                             }}></input>
                         </div>
                         <div className="input-box">
                             <span className="details">Student Image</span>
-                            <input type="text" placeholder="Image" required onChange={(e)=>{
+                            <input type="text" value={data.StudentImage}  onChange={(e)=>{
                                 setData({...data,StudentImage:e.target.value});
                             }}></input>
                         </div>
                         <div className="input-box">
                             <span className="details">Student Email</span>
-                            <input type="text" placeholder="Email" required onChange={(e)=>{
+                            <input type="text" value={data.StudentEmail} required onChange={(e)=>{
                                 setData({...data,StudentEmail:e.target.value});
                             }}></input>
                         </div>
                         <div className="input-box">
                             <span className="details">Student EnrollmentNO</span>
-                            <input type="text" placeholder="Department" required onChange={(e)=>{
+                            <input type="text" value={data.StudentEnrollmentNo} required onChange={(e)=>{
                                 setData({...data,StudentEnrollmentNo:e.target.value});
                             }}></input>
                         </div>
                         <div className="input-box">
                             <span className="details">Student Branch</span>
-                            <input type="text" placeholder="Salary" required onChange={(e)=>{
+                            <input type="text" value={data.StudentBranch} required onChange={(e)=>{
                                 setData({...data,StudentBranch:e.target.value});
                             }}></input>
                         </div>
                         <div className="input-box">
                             <span className="details">Student Mobile Number</span>
-                            <input type="text" placeholder="Mobile Number" required onChange={(e)=>{
-                                setData({...data,StudentMobileNo:e.target.value});
+                            <input type="text" value={data.StudentMobile} required onChange={(e)=>{
+                                setData({...data,StudentMobile:e.target.value});
                             }}></input>
                         </div>
                         <div className="button1">

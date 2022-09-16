@@ -1,9 +1,10 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-export default function GetAllStudent(){
+export default function GetAllPrinter(){
     const navigate = useNavigate();
-    const apiUrl = "https://6311884019eb631f9d740d9b.mockapi.io/Student";
+    const apiUrl = "https://6311884019eb631f9d740d9b.mockapi.io/Printers";
     const [data,setData] = useState([]);
 
     useEffect(()=>{
@@ -12,15 +13,15 @@ export default function GetAllStudent(){
         .then(res=>setData(res))
     },[]);
 
-    const fire = data && data.map((stu)=>{
+    const fire = data && data.map((pro)=>{
         return(
             <div className="box">
                 <span></span>
                 <div className="content">
-                <img src={stu.StudentImage} className="card-img-top" />
-                <h2>{stu.StudentName}</h2>
+                <img src={pro.PrinterImage} className="card-img-top" />
+                <h2>{pro.PrinterName}</h2>
                 <div className="btn btn-primary" onClick={()=>{
-                    navigate("/Student/"+stu.id);
+                    navigate("/Printer/"+pro.id);
                     }}>Detail
                 </div>
                 </div>
@@ -29,7 +30,7 @@ export default function GetAllStudent(){
     })
     return(
         <>
-            <div className="cnt homeBg2">
+             <div className="cnt homeBg2">
                 <div className="row row-cols-1 row-cols-md-3 g-4 align">
                     {fire}{" "}
                 </div>

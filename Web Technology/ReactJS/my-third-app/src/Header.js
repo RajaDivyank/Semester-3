@@ -14,6 +14,10 @@ export default function Header(){
               <Link to="./Faculty" className="item" >Faculty</Link>{" "}
             &nbsp; &nbsp; &nbsp; &nbsp;
               <Link to="./Faculty/add" className="item">Add Faculty</Link>{" "}
+            &nbsp; &nbsp; &nbsp; &nbsp; 
+              <Link to="./Printer" className="item"> Printer </Link>
+            &nbsp;  &nbsp;  &nbsp;  &nbsp; 
+              <Link to="./Printer/add" className="item" > Add Printer</Link>
           </div>
         </>
     );

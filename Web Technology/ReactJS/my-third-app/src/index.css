@@ -173,7 +173,7 @@ code {
 
 .cnt .box:before,
 .cnt .box:after {
-  background: linear-gradient(315deg, #0310ff, #ff5500);
+  background: linear-gradient(315deg, #1803ff, #ff5500);
 }
 
 .cnt .box span {

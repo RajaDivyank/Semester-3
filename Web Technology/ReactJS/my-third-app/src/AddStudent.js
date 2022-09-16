@@ -10,7 +10,7 @@ export default function AddStudent(){
         <div className="Whole">
             <div className="container2">
                 <div className="title">Student Registration</div>
-                <form action="#">
+                <form >
                     <div className="user-details">
                         <div className="input-box">
                             <span className="details">Student Name</span>
@@ -20,7 +20,7 @@ export default function AddStudent(){
                         </div>
                         <div className="input-box">
                             <span className="details">Student Image</span>
-                            <input type="text" placeholder="Image" required onChange={(e)=>{
+                            <input type="text" placeholder="Image"  required onChange={(e)=>{
                                 setData({...data,StudentImage:e.target.value});
                             }}></input>
                         </div>
@@ -49,7 +49,7 @@ export default function AddStudent(){
                             }}></input>
                         </div>
                         <div className="button1">
-                        <input type="submit" value="Add Student"  onClick={()=>{
+                        <input type="button" value="Add Student"  onClick={()=>{
                             fetch(apiUrl,{method:"POST",
                             body:JSON.stringify(data),
                             headers:{

@@ -10,7 +10,7 @@ export default function AddFaculty(){
         <div className="Whole">
             <div className="container2">
                 <div className="title">Faculty Registration</div>
-                <form action="#">
+                <form >
                     <div className="user-details">
                         <div className="input-box">
                             <span className="details">Faculty Name</span>
@@ -49,7 +49,7 @@ export default function AddFaculty(){
                             }}></input>
                         </div>
                         <div className="button1">
-                        <input type="submit" value="Add Faculty"  onClick={()=>{
+                        <input type="button" value="Add Faculty"  onClick={()=>{
                             fetch(apiUrl,{method:"POST",
                             body:JSON.stringify(data),
                             headers:{
