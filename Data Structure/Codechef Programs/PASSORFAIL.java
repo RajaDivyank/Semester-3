@@ -4,7 +4,6 @@ import java.util.*;
 class PASSORFAIL{
     public static void main(String args[]){
         Scanner sc = new Scanner(System.in);
-        // PrintWriter p = new PrintWriter(System.out);
         int T = sc.nextInt();
         while (T-->0) {
             int a = sc.nextInt();
