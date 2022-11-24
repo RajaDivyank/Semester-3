@@ -1,0 +1,72 @@
+<div class="row">
+  <div class="card col-3 p-2" *ngFor="let fac of faculties; let i = index">
+    <img [src]="fac.FacultyImage" class="card-img-top" alt="..." />
+    <div class="card-body">
+      <h5 class="card-title">{{ fac.FacultyName }}</h5>
+      <!-- <p class="card-text"> {{stu.department}} </p> -->
+      <div>Faculty Designation : {{ fac.FacultyDesignation }}</div>
+      <div>Qualification : {{ fac.FacultyEducationQualification }}</div>
+      <div>Faculty Experience : {{ fac.FacultyExperience }}</div>
+      <div>Faculty Working Since : {{ fac.FacultyWorkingSince }}</div>
+      <div class="row">
+        <div class="btn btn-primary col m-1">Edit</div>
+        <div class="btn btn-danger col m-1" (click)="deleteFaculty(i)">
+          Delete
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br /><br />
+
+<form [formGroup]="myForm" (ngSubmit)="insert()">
+  <div class="mb-3 row">
+    <label class="col-sm-2 col-form-label">Faculty Name : </label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" formControlName="FacultyName" />
+    </div>
+  </div>
+  <div class="mb-3 row">
+    <label class="col-sm-2 col-form-label">Faculty Designation : </label>
+    <div class="col-sm-10">
+      <input
+        type="text"
+        class="form-control"
+        formControlName="FacultyDesignation"
+      />
+    </div>
+  </div>
+  <div class="mb-3 row">
+    <label class="col-sm-2 col-form-label">Qualification : </label>
+    <div class="col-sm-10">
+      <input
+        type="text"
+        class="form-control"
+        formControlName="FacultyEducationQualification"
+      />
+    </div>
+  </div>
+  <div class="mb-3 row">
+    <label class="col-sm-2 col-form-label">Faculty Experience : </label>
+    <div class="col-sm-10">
+      <input
+        type="text"
+        class="form-control"
+        formControlName="FacultyExperience"
+      />
+    </div>
+  </div>
+  <div class="mb-3 row">
+    <label class="col-sm-2 col-form-label">Faculty Working Since : </label>
+    <div class="col-sm-10">
+      <input
+        type="text"
+        class="form-control"
+        formControlName="FacultyWorkingSince"
+      />
+    </div>
+  </div>
+  <div>
+    <input type="submit" class="btn btn-primary col m-1" />
+  </div>
+</form>

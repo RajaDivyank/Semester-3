@@ -1,7 +1,7 @@
 import java.util.*;
 import java.io.*;
 
-class Codechef{
+class JOHNY{
 	public static void main (String[] args) throws java.lang.Exception{
 		BufferedReader read = new BufferedReader(new InputStreamReader(System.in));
 		int t = Integer.parseInt(read.readLine());

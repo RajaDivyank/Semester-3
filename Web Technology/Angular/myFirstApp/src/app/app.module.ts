@@ -5,10 +5,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ResultComponent } from './result/result.component';
 import { ProductComponent } from './product/product.component';
 import { StudentComponent } from './student/student.component';
+import { FacultyComponent } from './faculty/faculty.component';
+import { ExpriencesComponent } from './expriences/expriences.component';
 
 @NgModule({
   declarations: [
@@ -17,14 +19,12 @@ import { StudentComponent } from './student/student.component';
     AboutComponent,
     ResultComponent,
     ProductComponent,
-    StudentComponent
+    StudentComponent,
+    FacultyComponent,
+    ExpriencesComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
