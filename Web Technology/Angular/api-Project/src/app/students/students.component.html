@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="card col-3" *ngFor="let stu of data">
+    <img [src]="stu.avatar" class="card-img-top" alt="..." />
+    <div class="card-body">
+      <h5 class="card-title">stu.name</h5>
+      <p class="card-text">
+        Some quick example text to build on the card title and make up the bulk
+        of the card's content.
+      </p>
+      <div class="row">
+        <a routerLink="/students/{{ stu.id }}" class="btn btn-primary col m-2"
+          >Detail</a
+        >
+        <a class="btn btn-primary col m-2">Edit</a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,46 @@
+.home {
+  font-size: 140px;
+  background: linear-gradient(
+    90deg,
+    #ff6666,
+    #ff66cc,
+    #9966ff,
+    #0066ff,
+    #00ccff,
+    #66ffff
+  );
+  background-size: 450px;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  animation: animat 100s linear infinite;
+}
+@keyframes animat {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 100000%;
+  }
+}
+.homeBg {
+  width: 100vw;
+  height: 94vh;
+  background-image: radial-gradient(
+    circle,
+    #000000,
+    #190712,
+    #220f24,
+    #22173a,
+    #032354 /* #251582,
+    #565422,
+    #598465,
+    #974665 */
+  );
+}
+.homeBorder {
+  position: absolute;
+  margin-top: 30vh;
+  margin-left: 36vw;
+  margin-right: 35vw;
+  align-items: center;
+}

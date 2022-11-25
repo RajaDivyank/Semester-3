@@ -1,0 +1,39 @@
+<!-- <h1>{{ data.name }}</h1>
+<button routerLink="/students" class="btn btn-primary col m-2">Back</button> -->
+<div class="container1">
+  <div class="profile-box">
+    <!-- <img
+      [src]="https://png.pngtree.com/png-clipart/20190614/original/pngtree-menu-vector-icon-png-image_3791388.jpg"
+      class="menu-icon"
+    />
+    <img
+      [src]="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJfWypuFF6cVZCPSFhlTQcjouyhwK2olyPQg&usqp=CAU"
+      class="setting-icon"
+    /> -->
+    <img [src]="data.avatar" class="profile-pic" />
+    <h3>{{ data.name }}</h3>
+    <!-- <div class="social-media">
+      <img
+        [src]="https://images.unsplash.com/photo-1634942537034-2531766767d1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8aW5zdGFncmFtJTIwbG9nb3xlbnwwfHwwfHw%3D&w=1000&q=80"
+      />
+      <img
+        [src]="https://i.pinimg.com/236x/b7/91/26/b79126d537c628d7ac5429f7f84ffc8e--twitter-logo-twitter-icon.jpg"
+      />
+      <img [src]="https://pngimg.com/uploads/linkedIn/linkedIn_PNG38.png" />
+    </div> -->
+    <button type="button">Follow</button>
+    <div class="profile-bottom">
+      <div class="data">Department : {{ data.department }}</div>
+      <div class="data">roll_no : {{ data.roll_no }}</div>
+      <div class="data">City : {{ data.city }}</div>
+      <div class="data">User Name : {{ data.username }}</div>
+      <div class="row">
+        <button class="btn btn-primary col hello">DELETE</button>
+        <button class="btn btn-primary col hello">Edit</button>
+        <button routerLink="/students" class="btn btn-primary col hello">
+          Back
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

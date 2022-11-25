@@ -1,0 +1,26 @@
+.nav {
+  /* background: #28282b; */
+  background: #87a8d9;
+  width: 100vw;
+  height: 50px;
+  align-items: center;
+}
+.item {
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: bolder;
+  color: silver;
+  font-family: "Kalam", cursive;
+}
+.item:hover {
+  background: linear-gradient(
+    to right,
+    #87a8d9,
+    #929ee2,
+    #aa91e3,
+    #c87fd9,
+    #e668c3
+  );
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
