@@ -2,7 +2,7 @@
   <div class="main">
     <div class="register">
       <h2>Add Student Here</h2>
-      <div class="id" method="post">
+      <form id="register" [formGroup]="myForm" (ngSubmit)="insert()">
         <label>Enter Name : </label>
         <br />
         <input
@@ -10,11 +10,18 @@
           name="fname"
           id="name"
           placeholder="Enter Your Name "
+          formControlName="name"
         />
         <br />
         <label>Enter avatar : </label>
         <br />
-        <input type="text" name="fname" id="name" placeholder="Enter Image " />
+        <input
+          type="text"
+          name="fname"
+          id="name"
+          placeholder="Enter Image "
+          formControlName="avatar"
+        />
         <br />
         <label>Enter department : </label>
         <br />
@@ -23,6 +30,7 @@
           name="fname"
           id="name"
           placeholder="Enter department "
+          formControlName="department"
         />
         <br />
         <label>Enter roll_no : </label>
@@ -32,11 +40,18 @@
           name="fname"
           id="name"
           placeholder="Enter roll_no "
+          formControlName="roll_no"
         />
         <br />
         <label>Enter city : </label>
         <br />
-        <input type="text" name="fname" id="name" placeholder="Enter city " />
+        <input
+          type="text"
+          name="fname"
+          id="name"
+          placeholder="Enter city "
+          formControlName="city"
+        />
         <br />
         <label>Enter username : </label>
         <br />
@@ -45,6 +60,7 @@
           name="fname"
           id="name"
           placeholder="Enter username "
+          formControlName="username"
         />
         <br />
         <label>Enter password : </label>
@@ -54,11 +70,12 @@
           name="fname"
           id="name"
           placeholder="Enter password "
+          formControlName="password"
         />
         <br />
         <br />
-        <input type="submit" value="submit" name="submit" id="submit" />
-      </div>
+        <input type="submit" [value]="btnName" id="submit" />
+      </form>
     </div>
   </div>
 </div>

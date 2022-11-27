@@ -17,4 +17,10 @@ export class ApiStudentService {
   deleteStudentById(id: any) {
     return this.__http.delete(this.apiUrl + '/' + id);
   }
+  insert(form: any) {
+    return this.__http.post(this.apiUrl, form);
+  }
+  update(id: any, form: any) {
+    return this.__http.put(this.apiUrl + '/' + id, form);
+  }
 }

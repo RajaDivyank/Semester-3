@@ -27,11 +27,17 @@
       <div class="data">roll_no : {{ data.roll_no }}</div>
       <div class="data">City : {{ data.city }}</div>
       <div class="data">User Name : {{ data.username }}</div>
+      <div class="data">Password : {{ data.password }}</div>
       <div class="row">
         <button (click)="delete()" class="btn btn-primary col hello">
           DELETE
         </button>
-        <button class="btn btn-primary col hello">Edit</button>
+        <button
+          routerLink="/students/edit/{{ data.id }} "
+          class="btn btn-primary col hello"
+        >
+          Edit
+        </button>
         <button routerLink="/students" class="btn btn-primary col hello">
           Back
         </button>
