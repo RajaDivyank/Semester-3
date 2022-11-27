@@ -28,7 +28,9 @@
       <div class="data">City : {{ data.city }}</div>
       <div class="data">User Name : {{ data.username }}</div>
       <div class="row">
-        <button class="btn btn-primary col hello">DELETE</button>
+        <button (click)="delete()" class="btn btn-primary col hello">
+          DELETE
+        </button>
         <button class="btn btn-primary col hello">Edit</button>
         <button routerLink="/students" class="btn btn-primary col hello">
           Back

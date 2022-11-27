@@ -16,4 +16,9 @@ export class StudentsComponent {
       this.data = res;
     });
   }
+  delete(id: any) {
+    this.__api.deleteStudentById(id).subscribe((res) => {
+      this.ngOnInit();
+    });
+  }
 }
