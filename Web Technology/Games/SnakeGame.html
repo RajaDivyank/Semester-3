@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-        #maincontainer{
+        #mainContainer{
             margin-left: 5px;
             border: 3px solid black;
             position: absolute; 
@@ -26,27 +26,27 @@
     </style>
 </head>
 <body onkeydown="runSnake()">
-    <Div id="maincontainer"></Div>
+    <Div id="mainContainer"></Div>
     <img src="Snakeimg.gif" id="Snake">
     <img src="Ratimg.gif" id="food">
-    <div id="scoreboard" style="position: absolute; color: green;" ><h1>Score : </h1><h2 id="scorecount">0</h2></div>
-    <div id="lifeboard" style="position: absolute; color: red;" ><h1>Life : </h1><h2 id="lifecount">3</h2></div>
+    <div id="scoreboard" style="position: absolute; color: green;" ><h1>Score : </h1><h2 id="scoreCount">0</h2></div>
+    <div id="lifeBoard" style="position: absolute; color: red;" ><h1>Life : </h1><h2 id="lifeCount">3</h2></div>
 
     <script>
-        let c=0 , scorecounter=0, lifecounter=3;
+        let c=0 , scoreCounter=0, lifeCounter=3;
         document.getElementById("scoreboard").style.top=(screen.height)*0.70+'px';
-        document.getElementById("lifeboard").style.top=(screen.height)*0.70+'px';
-        document.getElementById("lifeboard").style.left=(screen.width)*0.50+'px';
+        document.getElementById("lifeBoard").style.top=(screen.height)*0.70+'px';
+        document.getElementById("lifeBoard").style.left=(screen.width)*0.50+'px';
 
-        let contain = document.getElementById("maincontainer").style; 
+        let contain = document.getElementById("mainContainer").style; 
         contain.width=(screen.width)*0.99+'px'; 
         contain.height=(screen.height)*0.70+'px';;
 
         let food = document.getElementById("food").style;
-        let foodleft = (Math.random())*((screen.width)*0.92);
-        let foodtop = (Math.random())*((screen.height)*0.58);
-        food.left = foodleft +'px';
-        food.top = foodtop +'px';
+        let foodLeft = (Math.random())*((screen.width)*0.92);
+        let foodTop = (Math.random())*((screen.height)*0.58);
+        food.left = foodLeft +'px';
+        food.top = foodTop +'px';
 
         let snake = document.getElementById("Snake");
         let Right = (Math.random())*((screen.width)*0.90);
@@ -54,22 +54,22 @@
         snake.style.left = Right +'px';
         snake.style.top = Up +'px';
 
-        function foodchange(){
-            foodleft = (Math.random())*((screen.width)*0.92);
-            foodtop = (Math.random())*((screen.height)*0.58);
-            food.left = foodleft +'px';
-            food.top = foodtop +'px';
-            scorecounter++;
-            document.getElementById("scorecount").innerHTML=scorecounter;
+        function foodChange(){
+            foodLeft = (Math.random())*((screen.width)*0.92);
+            foodTop = (Math.random())*((screen.height)*0.58);
+            food.left = foodLeft +'px';
+            food.top = foodTop +'px';
+            scoreCounter++;
+            document.getElementById("scoreCount").innerHTML=scoreCounter;
         }
 
         function life(){
             clearInterval(c)
-            lifecounter--;
-            if(lifecounter<1){
-                document.write('<h1>GameOver<h1> <h2>Your Score : '+scorecounter+'<h2>')
+            lifeCounter--;
+            if(lifeCounter<1){
+                document.write('<h1>GameOver<h1> <h2>Your Score : '+scoreCounter+'<h2>')
             }
-            document.getElementById("lifecount").innerHTML=lifecounter;
+            document.getElementById("lifeCount").innerHTML=lifeCounter;
         }
 
         function runSnake(){
@@ -80,6 +80,7 @@
                        left = setInterval(goLeft,10);
                        c = left;
                        break;
+                       
                    case 38:
                        up = setInterval(goTop,10);
                        c = up;
@@ -99,9 +100,9 @@
        function goLeft(){
             Right--;
             snake.style.left= Right +'px';
-            if(parseInt(foodleft)+20==(parseInt(Right))){
-                if(parseInt(foodtop)-parseInt(Up)>-20 && parseInt(foodtop)-parseInt(Up)<101){
-                    foodchange()
+            if(parseInt(foodLeft)+20==(parseInt(Right))){
+                if(parseInt(foodTop)-parseInt(Up)>-20 && parseInt(foodTop)-parseInt(Up)<101){
+                    foodChange()
                 }
             }
             if(Right<=0){
@@ -112,9 +113,9 @@
         function goTop(){
             Up--;
             snake.style.top= Up +'px';
-            if(parseInt(foodtop)+20==(parseInt(Up))){
-                if(parseInt(foodleft)-parseInt(Right)>=-20 &&parseInt(foodleft)-parseInt(Right)<101){
-                    foodchange()
+            if(parseInt(foodTop)+20==(parseInt(Up))){
+                if(parseInt(foodLeft)-parseInt(Right)>=-20 &&parseInt(foodLeft)-parseInt(Right)<101){
+                    foodChange()
                 }
             }
             if(Up<=0){
@@ -125,9 +126,9 @@
        function goRight(){
             Right++;
             snake.style.left= Right+'px'
-            if(parseInt(foodleft)==(parseInt(Right)+100)){
-                if(parseInt(foodtop)-parseInt(Up)>-20 && parseInt(foodtop)-parseInt(Up)<101){
-                    foodchange()
+            if(parseInt(foodLeft)==(parseInt(Right)+100)){
+                if(parseInt(foodTop)-parseInt(Up)>-20 && parseInt(foodTop)-parseInt(Up)<101){
+                    foodChange()
                 }
             }
             if(Right+100>=(screen.width)*0.99){
@@ -138,9 +139,9 @@
         function goBottom(){
             Up++;
             snake.style.top= Up +'px'
-            if(parseInt(foodtop)==(parseInt(Up))+100){
-                if(parseInt(foodleft)-parseInt(Right)>=-20 &&parseInt(foodleft)-parseInt(Right)<101){
-                    foodchange()
+            if(parseInt(foodTop)==(parseInt(Up))+100){
+                if(parseInt(foodLeft)-parseInt(Right)>=-20 &&parseInt(foodLeft)-parseInt(Right)<101){
+                    foodChange()
                 }
             }
             if(Up+100>=(screen.height)*0.70){

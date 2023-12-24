@@ -1,0 +1,30 @@
+  app.post("/laptops", async (req, res) => {
+    const data = new Laptop();
+    data.LaptopID = req.body.LaptopID;
+    data.LaptopName = req.body.LaptopName;
+    data.LaptopImage = req.body.LaptopImage;
+    data.LaptopRam = req.body.LaptopRam;
+    data.LaptopProcessor = req.body.LaptopProcessor;
+    data.LaptopGraphicsCard = req.body.LaptopGraphicsCard;
+    data.LaptopHD = req.body.LaptopHD;
+    data = await lap.save();
+    res.send(data);
+  });
+
+  app.put("/laptops/:id", async (req, res) => {
+    const data = await Laptop.findOne({ LaptopID: req.params.id });
+    data.LaptopID = req.body.LaptopID;
+    data.LaptopName = req.body.LaptopName;
+    data.LaptopImage = req.body.LaptopImage;
+    data.LaptopRam = req.body.LaptopRam;
+    data.LaptopProcessor = req.body.LaptopProcessor;
+    data.LaptopGraphicsCard = req.body.LaptopGraphicsCard;
+    data.LaptopHD = req.body.LaptopHD;
+    await data.save();
+    res.send(data);
+  });
+
+  app.delete("/laptops/:id", async (req, res) => {
+    const data = await Laptop.deleteOne({ LaptopID: req.params.id });
+    res.send(data);
+  });

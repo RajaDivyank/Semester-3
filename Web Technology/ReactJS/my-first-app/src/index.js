@@ -16,7 +16,7 @@ root.render(
       <Route path='/' element={<Layout/>}>
         <Route index element={<Home/>}></Route>
         <Route path="Student" element={<Student/>}>Student</Route>
-        <Route path="Product" element={<Product/>} >Product</Route>
+        <Route path="Product" element={<Product/>}>Product</Route>
       </Route>
     </Routes>
   </BrowserRouter>
